@@ -41,6 +41,7 @@
 
     <modules>
         <module>core</module>
+        <module>usecase</module>
     </modules>
 
     <dependencyManagement>

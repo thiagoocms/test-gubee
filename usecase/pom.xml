@@ -9,13 +9,21 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>br.com.gubee.interview.core</groupId>
-    <artifactId>teste-pleno-gubee-core</artifactId>
+    <groupId>br.com.gubee.interview.usecase</groupId>
+    <artifactId>teste-pleno-gubee-usecase</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.com.gubee.interview.core</groupId>
+            <artifactId>teste-pleno-gubee-core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
