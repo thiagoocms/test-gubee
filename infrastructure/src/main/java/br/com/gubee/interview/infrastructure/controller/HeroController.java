@@ -17,7 +17,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = AppConstants.PATH + AppConstants.API + AppConstants.V1 + AppConstants.URL_SUFFIX +"heroes")
+@RequestMapping(value = AppConstants.PATH + AppConstants.API + AppConstants.V1 + AppConstants.URL_SUFFIX + "heroes")
 public class HeroController {
 
     private final CreateHeroUseCase createHeroUseCase;

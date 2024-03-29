@@ -1,0 +1,345 @@
+[32m[INFO ][m [35m[2024-03-29T17:37:18,239] [main] [AnnotationConfigContextLoaderUtils][m Could not detect default configuration classes for test class [ApplicationIt]: ApplicationIt does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+[32m[INFO ][m [35m[2024-03-29T17:38:25,852] [main] [AnnotationConfigContextLoaderUtils][m Could not detect default configuration classes for test class [ApplicationIt]: ApplicationIt does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+[32m[INFO ][m [35m[2024-03-29T17:40:08,476] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 33239 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:40:08,489] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:40:08,873] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:40:08,873] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:40:09,009] [main] [TestDispatcherServlet][m Completed initialization in 133 ms 
+[32m[INFO ][m [35m[2024-03-29T17:40:09,065] [main] [ApplicationIt][m Started ApplicationIt in 0.971 seconds (process running for 2.906) 
+[33m[WARN ][m [35m[2024-03-29T17:40:10,024] [main] [PageNotFound][m No mapping for GET /health 
+[32m[INFO ][m [35m[2024-03-29T17:42:40,437] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 33416 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:42:40,448] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:42:41,275] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:42:41,307] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:42:41,942] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:42:41,942] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:42:41,943] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:42:41,966] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:42:42,245] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@231b35fb 
+[32m[INFO ][m [35m[2024-03-29T17:42:42,247] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:42:42,275] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:42:42,288] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:42:42,443] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.037s) 
+[32m[INFO ][m [35m[2024-03-29T17:42:42,464] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:42:42,465] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:42:43,416] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:42:43,416] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:42:43,421] [main] [TestDispatcherServlet][m Completed initialization in 1 ms 
+[32m[INFO ][m [35m[2024-03-29T17:42:43,455] [main] [ApplicationIt][m Started ApplicationIt in 3.396 seconds (process running for 5.276) 
+[32m[INFO ][m [35m[2024-03-29T17:42:44,528] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:42:44,546] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:43:27,077] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 33550 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:43:27,087] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:43:27,883] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:43:27,919] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 27 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:43:28,582] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:43:28,582] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:43:28,583] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:43:28,601] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:43:28,936] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22cb3d59 
+[32m[INFO ][m [35m[2024-03-29T17:43:28,939] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:43:28,969] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:43:28,983] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:43:29,144] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.040s) 
+[32m[INFO ][m [35m[2024-03-29T17:43:29,166] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:43:29,168] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:43:30,063] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:43:30,063] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:43:30,069] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:43:30,096] [main] [ApplicationIt][m Started ApplicationIt in 3.36 seconds (process running for 5.195) 
+[32m[INFO ][m [35m[2024-03-29T17:43:31,251] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:43:31,260] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:45:02,603] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 33694 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:45:02,613] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:45:03,419] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:45:03,448] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,099] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,100] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,100] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:45:04,120] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,407] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c835217 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,410] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,446] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:45:04,460] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,636] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.043s) 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,660] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:45:04,662] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:45:05,599] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:45:05,599] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:45:05,604] [main] [TestDispatcherServlet][m Completed initialization in 1 ms 
+[32m[INFO ][m [35m[2024-03-29T17:45:05,636] [main] [ApplicationIt][m Started ApplicationIt in 3.375 seconds (process running for 5.221) 
+[32m[INFO ][m [35m[2024-03-29T17:45:06,822] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:45:06,832] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:46:00,039] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 33857 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:46:00,056] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:46:00,916] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:46:00,947] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:46:01,622] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:46:01,622] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:46:01,623] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:46:01,645] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:46:01,948] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@448462f0 
+[32m[INFO ][m [35m[2024-03-29T17:46:01,953] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:46:01,982] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:46:02,000] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:46:02,162] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.041s) 
+[32m[INFO ][m [35m[2024-03-29T17:46:02,190] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:46:02,192] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:46:03,084] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:46:03,084] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:46:03,090] [main] [TestDispatcherServlet][m Completed initialization in 1 ms 
+[32m[INFO ][m [35m[2024-03-29T17:46:03,120] [main] [ApplicationIt][m Started ApplicationIt in 3.445 seconds (process running for 5.277) 
+[32m[INFO ][m [35m[2024-03-29T17:46:04,253] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:46:04,267] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:46:46,370] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 33978 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:46:46,382] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:46:47,369] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:46:47,404] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 27 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,241] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,242] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,242] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:46:48,267] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,632] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@785ed99c 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,635] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,662] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:46:48,678] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,868] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.047s) 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,889] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:46:48,891] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:46:50,040] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:46:50,040] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:46:50,045] [main] [TestDispatcherServlet][m Completed initialization in 1 ms 
+[32m[INFO ][m [35m[2024-03-29T17:46:50,078] [main] [ApplicationIt][m Started ApplicationIt in 4.158 seconds (process running for 6.99) 
+[32m[INFO ][m [35m[2024-03-29T17:47:09,408] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:47:09,419] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:47:52,031] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 34160 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:47:52,043] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:47:52,942] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:47:52,976] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 27 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:47:53,648] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:47:53,648] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:47:53,649] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:47:53,672] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:47:54,007] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19b5214b 
+[32m[INFO ][m [35m[2024-03-29T17:47:54,009] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:47:54,039] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:47:54,049] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:47:54,206] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.045s) 
+[32m[INFO ][m [35m[2024-03-29T17:47:54,229] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:47:54,231] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:47:55,262] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:47:55,263] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:47:55,269] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:47:55,302] [main] [ApplicationIt][m Started ApplicationIt in 3.681 seconds (process running for 5.56) 
+[32m[INFO ][m [35m[2024-03-29T17:47:56,606] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:47:56,614] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:49:34,176] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 34332 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:49:34,186] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:49:35,038] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:49:35,070] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:49:35,739] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:49:35,740] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:49:35,740] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:49:35,762] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:49:36,067] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28b8f98a 
+[32m[INFO ][m [35m[2024-03-29T17:49:36,071] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:49:36,102] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:49:36,115] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:49:36,260] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.034s) 
+[32m[INFO ][m [35m[2024-03-29T17:49:36,286] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:49:36,288] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:49:37,198] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:49:37,198] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:49:37,203] [main] [TestDispatcherServlet][m Completed initialization in 1 ms 
+[32m[INFO ][m [35m[2024-03-29T17:49:37,238] [main] [ApplicationIt][m Started ApplicationIt in 3.433 seconds (process running for 5.296) 
+[32m[INFO ][m [35m[2024-03-29T17:49:38,366] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:49:38,380] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:50:58,557] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 34505 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:50:58,568] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:50:59,449] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:50:59,481] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,187] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,187] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,188] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:51:00,214] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,512] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51888019 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,515] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,544] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:51:00,556] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,728] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.041s) 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,752] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:51:00,753] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:51:01,657] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:51:01,658] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:51:01,664] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:51:01,695] [main] [ApplicationIt][m Started ApplicationIt in 3.519 seconds (process running for 5.313) 
+[32m[INFO ][m [35m[2024-03-29T17:51:02,838] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:51:02,854] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:51:57,983] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 34644 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:51:57,994] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:51:58,931] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:51:58,966] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 27 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:51:59,676] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:51:59,676] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:51:59,677] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:51:59,698] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:51:59,987] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5fb3111a 
+[32m[INFO ][m [35m[2024-03-29T17:51:59,990] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:52:00,022] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:52:00,040] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:52:00,202] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.038s) 
+[32m[INFO ][m [35m[2024-03-29T17:52:00,225] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:52:00,227] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:52:01,153] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:52:01,154] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:52:01,159] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:52:01,192] [main] [ApplicationIt][m Started ApplicationIt in 3.584 seconds (process running for 5.843) 
+[32m[INFO ][m [35m[2024-03-29T17:52:02,367] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:52:02,385] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:52:33,271] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 34811 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:52:33,282] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:52:34,103] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:52:34,134] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:52:34,748] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:52:34,749] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:52:34,749] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:52:34,771] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:52:35,060] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f235107 
+[32m[INFO ][m [35m[2024-03-29T17:52:35,063] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:52:35,093] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:52:35,108] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:52:35,267] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.039s) 
+[32m[INFO ][m [35m[2024-03-29T17:52:35,290] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:52:35,291] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:52:36,270] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:52:36,271] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:52:36,275] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:52:36,304] [main] [ApplicationIt][m Started ApplicationIt in 3.364 seconds (process running for 5.49) 
+[32m[INFO ][m [35m[2024-03-29T17:52:37,461] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:52:37,470] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:53:15,405] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 34941 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:53:15,419] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:53:16,298] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:53:16,329] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,010] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,010] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,014] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:53:17,039] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,333] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26da1ba2 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,337] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,375] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:53:17,388] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,554] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.040s) 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,581] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:53:17,582] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:53:18,524] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:53:18,524] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:53:18,530] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:53:18,560] [main] [ApplicationIt][m Started ApplicationIt in 3.525 seconds (process running for 5.53) 
+[32m[INFO ][m [35m[2024-03-29T17:53:19,737] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:53:19,748] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:55:59,606] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 35124 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:55:59,617] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:56:00,491] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:56:00,519] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,157] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,158] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,161] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:56:01,182] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,462] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f235107 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,465] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,494] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:56:01,506] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,663] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.039s) 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,686] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:56:01,687] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:56:02,653] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:56:02,654] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:56:02,660] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:56:02,690] [main] [ApplicationIt][m Started ApplicationIt in 3.438 seconds (process running for 5.499) 
+[32m[INFO ][m [35m[2024-03-29T17:56:03,859] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:56:03,869] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:57:08,926] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 35267 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:57:08,940] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:57:09,792] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:57:09,824] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,447] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,448] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,449] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:57:10,471] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,763] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4aaecabd 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,765] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,793] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:57:10,806] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,958] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.042s) 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,981] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:57:10,982] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:57:11,878] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:57:11,879] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:57:11,884] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:57:11,910] [main] [ApplicationIt][m Started ApplicationIt in 3.357 seconds (process running for 5.433) 
+[32m[INFO ][m [35m[2024-03-29T17:57:13,153] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:57:13,161] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:58:52,683] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 35419 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:58:52,695] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:58:53,542] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:58:53,576] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,230] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,230] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,231] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:58:54,250] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,535] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2407a36c 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,537] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,563] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:58:54,578] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,740] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.039s) 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,764] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:58:54,766] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:58:55,742] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:58:55,743] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:58:55,749] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:58:55,778] [main] [ApplicationIt][m Started ApplicationIt in 3.46 seconds (process running for 5.451) 
+[32m[INFO ][m [35m[2024-03-29T17:58:57,074] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:58:57,079] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T17:59:46,928] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 35548 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T17:59:46,938] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T17:59:47,778] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T17:59:47,805] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,430] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,431] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,434] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T17:59:48,457] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,753] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@581c9bb7 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,755] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,786] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T17:59:48,799] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,963] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.036s) 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,986] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T17:59:48,988] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T17:59:49,877] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:59:49,878] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T17:59:49,887] [main] [TestDispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T17:59:49,921] [main] [ApplicationIt][m Started ApplicationIt in 3.343 seconds (process running for 5.389) 
+[32m[INFO ][m [35m[2024-03-29T17:59:51,174] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T17:59:51,180] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T18:00:28,334] [main] [ApplicationIt][m Starting ApplicationIt using Java 17.0.9 with PID 35679 (started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee/infrastructure) 
+[32m[INFO ][m [35m[2024-03-29T18:00:28,344] [main] [ApplicationIt][m The following 1 profile is active: "test" 
+[32m[INFO ][m [35m[2024-03-29T18:00:29,216] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T18:00:29,245] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T18:00:29,906] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T18:00:29,907] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T18:00:29,907] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T18:00:29,930] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T18:00:30,251] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22cb3d59 
+[32m[INFO ][m [35m[2024-03-29T18:00:30,253] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T18:00:30,283] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T18:00:30,297] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T18:00:30,462] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.036s) 
+[32m[INFO ][m [35m[2024-03-29T18:00:30,486] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T18:00:30,488] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T18:00:31,482] [main] [SpringBootMockServletContext][m Initializing Spring TestDispatcherServlet '' 
+[32m[INFO ][m [35m[2024-03-29T18:00:31,482] [main] [TestDispatcherServlet][m Initializing Servlet '' 
+[32m[INFO ][m [35m[2024-03-29T18:00:31,488] [main] [TestDispatcherServlet][m Completed initialization in 1 ms 
+[32m[INFO ][m [35m[2024-03-29T18:00:31,521] [main] [ApplicationIt][m Started ApplicationIt in 3.59 seconds (process running for 5.835) 
+[32m[INFO ][m [35m[2024-03-29T18:00:32,615] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T18:00:32,631] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
