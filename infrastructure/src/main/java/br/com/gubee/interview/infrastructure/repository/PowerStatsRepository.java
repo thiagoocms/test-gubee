@@ -51,4 +51,13 @@ public class PowerStatsRepository {
             return null;
         }
     }
+
+    public void deleteById(UUID id) {
+        String sql = "DELETE FROM power_stats WHERE id = ?";
+        try {
+            jdbcTemplate.update(sql, id);
+        } catch (Exception e) {
+            throw new InternalErrorException("Falha ao tentar apagar as habilidades do heroi com o id: " + id);
+        }
+    }
 }

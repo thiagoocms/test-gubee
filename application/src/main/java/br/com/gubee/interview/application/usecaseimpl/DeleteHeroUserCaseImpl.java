@@ -23,7 +23,7 @@ public class DeleteHeroUserCaseImpl implements DeleteHeroUseCase {
     @Override
     public void deleteById(UUID id) {
         Hero hero = this.findHeroByIdUseCase.findById(id);
-        this.deletePowerStatsUseCase.deleteById(hero.getPowerStats().getId());
         this.deleteHeroGateway.deleteById(id);
+        this.deletePowerStatsUseCase.deleteById(hero.getPowerStats().getId());
     }
 }

@@ -50,7 +50,7 @@ public class HeroRepository {
                 return hero;
             });
         } catch (Exception e) {
-            throw new InternalErrorException(e.getMessage());
+            return null;
         }
     }
 
@@ -70,6 +70,15 @@ public class HeroRepository {
             });
         } catch (Exception e) {
            return null;
+        }
+    }
+
+    public void deleteById(UUID id) {
+        String sql = "DELETE FROM hero WHERE id = ?";
+        try {
+            jdbcTemplate.update(sql, id);
+        } catch (Exception e) {
+            throw new InternalErrorException("Falha ao tentar apagar o heroi com o id: " + id);
         }
     }
 }
