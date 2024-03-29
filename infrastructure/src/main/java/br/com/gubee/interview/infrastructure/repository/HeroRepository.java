@@ -24,12 +24,12 @@ public class HeroRepository {
 
     public Hero create(Hero hero) {
         String sql = "INSERT INTO hero (" +
-                "id, name, race, power_stats_id, enabled, created_at, updated_at) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                "id, name, race, power_stats_id, enabled) " +
+                "VALUES (?, ?, ?, ?, ?)";
         try {
             hero.setId(UUID.randomUUID());
-            jdbcTemplate.update(sql, hero.getId(), hero.getName(), hero.getRace().name(), hero.getPowerStats().getId(),
-                    hero.isEnabled(), Timestamp.valueOf(hero.getCreatedAt()), Timestamp.valueOf(hero.getUpdatedAt()));
+            jdbcTemplate.update(sql, hero.getId(), hero.getName(),
+                    hero.getRace().name(), hero.getPowerStats().getId(), hero.isEnabled());
             return hero;
         } catch (Exception e) {
             throw new InternalErrorException(e.getMessage());

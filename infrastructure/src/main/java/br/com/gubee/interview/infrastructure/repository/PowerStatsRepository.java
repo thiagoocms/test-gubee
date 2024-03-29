@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Timestamp;
+import java.util.Map;
 import java.util.UUID;
 
 @Repository
@@ -21,12 +22,18 @@ public class PowerStatsRepository {
 
     public PowerStats create(PowerStats powerStats) {
         String sql = "INSERT INTO power_stats (" +
-                "id, strength, agility, dexterity, intelligence, created_at, updated_at) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                "strength, agility, dexterity, intelligence) " +
+                "VALUES (?, ?, ?, ?) RETURNING id";
+
+        final Map<String, Object> params = Map.of(
+                "strength", powerStats.getStrength(),
+                "agility", powerStats.getAgility(),
+                "dexterity", powerStats.getDexterity(),
+                "intelligence", powerStats.getIntelligence()
+        );
         try {
-            powerStats.setId(UUID.randomUUID());
-            jdbcTemplate.update(sql, powerStats.getId(), powerStats.getStrength(), powerStats.getAgility(), powerStats.getDexterity(),
-                    powerStats.getIntelligence(), Timestamp.valueOf(powerStats.getCreatedAt()), Timestamp.valueOf(powerStats.getUpdatedAt()));
+            UUID id = jdbcTemplate.queryForObject(sql, params.values().toArray(), UUID.class);
+            powerStats.setId(id);
             return powerStats;
         } catch (Exception e) {
             throw new InternalErrorException(e.getMessage());
@@ -62,10 +69,17 @@ public class PowerStatsRepository {
     }
 
     public PowerStats update(UUID id, PowerStats powerStats) {
-        String sql = "UPDATE power_stats SET strength = ?, agility = ?, dexterity = ?, intelligence = ?, updated_at = ? WHERE id = ?";
+        String sql = "UPDATE power_stats SET strength = :strength, agility = :agility, dexterity = :dexterity, intelligence = :intelligence, updated_at = :updatedAt WHERE id = ?";
+        final Map<String, Object> params = Map.of(
+                "strength", powerStats.getStrength(),
+                "agility", powerStats.getAgility(),
+                "dexterity", powerStats.getDexterity(),
+                "intelligence", powerStats.getIntelligence(),
+                "updatedAt", powerStats.getUpdatedAt(),
+                "id", id
+        );
         try {
-            jdbcTemplate.update(sql, powerStats.getStrength(), powerStats.getAgility(), powerStats.getDexterity(),
-                    powerStats.getIntelligence(), Timestamp.valueOf(powerStats.getUpdatedAt()), id);
+            jdbcTemplate.update(sql, params);
             return powerStats;
         } catch (Exception e) {
             throw new InternalErrorException(e.getMessage());
