@@ -1,8 +1,10 @@
 package br.com.gubee.interview.infrastructure.mapper;
 
 import br.com.gubee.interview.core.domain.Hero;
+import br.com.gubee.interview.core.domain.HeroComparePowerStats;
 import br.com.gubee.interview.core.domain.HeroFilter;
 import br.com.gubee.interview.core.domain.PowerStats;
+import br.com.gubee.interview.infrastructure.dto.HeroComparePowerStatsResponse;
 import br.com.gubee.interview.infrastructure.dto.HeroFilterRequest;
 import br.com.gubee.interview.infrastructure.dto.HeroRequest;
 import br.com.gubee.interview.infrastructure.dto.HeroResponse;
@@ -49,5 +51,18 @@ public class HeroMapper {
        heroFilter.setName(filterRequest.getName());
 
        return heroFilter;
+    }
+
+    public static HeroComparePowerStatsResponse toHeroCompareResponse(HeroComparePowerStats hero) {
+        HeroComparePowerStatsResponse response = new HeroComparePowerStatsResponse();
+
+        response.setHeroId(hero.getHeroId());
+        response.setOpponentId(hero.getOpponentId());
+        response.setStrengthDifference(hero.getStrengthDifference());
+        response.setAgilityDifference(hero.getAgilityDifference());
+        response.setDexterityDifference(hero.getDexterityDifference());
+        response.setIntelligenceDifference(hero.getIntelligenceDifference());
+
+        return response;
     }
 }

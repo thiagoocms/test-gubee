@@ -69,7 +69,7 @@ public class PowerStatsRepository {
     }
 
     public PowerStats update(UUID id, PowerStats powerStats) {
-        String sql = "UPDATE power_stats SET strength = :strength, agility = :agility, dexterity = :dexterity, intelligence = :intelligence, updated_at = :updatedAt WHERE id = ?";
+        String sql = "UPDATE power_stats SET strength = ?, agility = ?, dexterity = ?, intelligence = ?, updated_at = ? WHERE id = ?";
         final Map<String, Object> params = Map.of(
                 "strength", powerStats.getStrength(),
                 "agility", powerStats.getAgility(),
@@ -79,7 +79,8 @@ public class PowerStatsRepository {
                 "id", id
         );
         try {
-            jdbcTemplate.update(sql, params);
+            jdbcTemplate.update(sql, powerStats.getStrength(), powerStats.getAgility(), powerStats.getDexterity(),
+                    powerStats.getIntelligence(), powerStats.getUpdatedAt(), id);
             return powerStats;
         } catch (Exception e) {
             throw new InternalErrorException(e.getMessage());

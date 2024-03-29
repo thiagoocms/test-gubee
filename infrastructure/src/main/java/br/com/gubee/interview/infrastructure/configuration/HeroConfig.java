@@ -63,4 +63,9 @@ public class HeroConfig {
     public FindHeroByFiltersUseCase findHeroByFiltersUseCase(FindHeroByFiltersGateway findHeroByFiltersGateway) {
         return new FindHeroByFiltersUseCaseImpl(findHeroByFiltersGateway);
     }
+
+    @Bean
+    public CompareHeroUseCase compareHeroUseCase(FindHeroByIdUseCase findHeroByIdUseCase) {
+        return new CompareHeroUseCaseImpl(findHeroByIdUseCase);
+    }
 }
