@@ -13,6 +13,9 @@ public class Hero extends AbstractAuditing {
     private PowerStats powerStats;
     private boolean enabled = Boolean.TRUE;
 
+    public Hero() {
+    }
+
     public Hero(UUID id, String name, HeroRaceEnum race, PowerStats powerStats, boolean enabled) {
         this.id = id;
         this.name = name;

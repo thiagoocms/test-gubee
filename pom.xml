@@ -43,6 +43,7 @@
         <module>core</module>
         <module>usecase</module>
         <module>application</module>
+        <module>infrastructure</module>
     </modules>
 
     <dependencyManagement>

@@ -11,6 +11,13 @@ public class PowerStats extends AbstractAuditing {
     private int dexterity;
     private int intelligence;
 
+    public PowerStats() {
+    }
+
+    public PowerStats(UUID id) {
+        this.id = id;
+    }
+
     public PowerStats(UUID id, int strength, int agility, int dexterity, int intelligence) {
         this.id = id;
         this.strength = strength;
