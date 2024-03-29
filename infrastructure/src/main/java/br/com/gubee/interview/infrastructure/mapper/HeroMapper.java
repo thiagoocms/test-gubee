@@ -1,7 +1,9 @@
 package br.com.gubee.interview.infrastructure.mapper;
 
 import br.com.gubee.interview.core.domain.Hero;
+import br.com.gubee.interview.core.domain.HeroFilter;
 import br.com.gubee.interview.core.domain.PowerStats;
+import br.com.gubee.interview.infrastructure.dto.HeroFilterRequest;
 import br.com.gubee.interview.infrastructure.dto.HeroRequest;
 import br.com.gubee.interview.infrastructure.dto.HeroResponse;
 import br.com.gubee.interview.infrastructure.repository.HeroRepository;
@@ -39,5 +41,13 @@ public class HeroMapper {
         heroResponse.setStrength(hero.getPowerStats().getStrength());
 
         return heroResponse;
+    }
+
+    public static HeroFilter toFilter(HeroFilterRequest filterRequest) {
+       HeroFilter heroFilter = new HeroFilter();
+
+       heroFilter.setName(filterRequest.getName());
+
+       return heroFilter;
     }
 }

@@ -1,21 +1,24 @@
 package br.com.gubee.interview.infrastructure.controller;
 
 import br.com.gubee.interview.core.domain.Hero;
+import br.com.gubee.interview.core.domain.HeroFilter;
 import br.com.gubee.interview.infrastructure.constants.AppConstants;
+import br.com.gubee.interview.infrastructure.dto.HeroFilterRequest;
 import br.com.gubee.interview.infrastructure.dto.HeroRequest;
 import br.com.gubee.interview.infrastructure.dto.HeroResponse;
 import br.com.gubee.interview.infrastructure.mapper.HeroMapper;
-import br.com.gubee.interview.usecase.CreateHeroUseCase;
-import br.com.gubee.interview.usecase.DeleteHeroUseCase;
-import br.com.gubee.interview.usecase.FindHeroByIdUseCase;
-import br.com.gubee.interview.usecase.UpdateHeroUseCase;
+import br.com.gubee.interview.usecase.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = AppConstants.PATH + AppConstants.API + AppConstants.V1 + "/heroes")
@@ -25,12 +28,14 @@ public class HeroController {
     private final FindHeroByIdUseCase findHeroByIdUseCase;
     private final DeleteHeroUseCase deleteHeroUseCase;
     private final UpdateHeroUseCase updateHeroUseCase;
+    private final FindHeroByFiltersUseCase findHeroByFiltersUseCase;
 
-    public HeroController(CreateHeroUseCase createHeroUseCase, FindHeroByIdUseCase findHeroByIdUseCase, DeleteHeroUseCase deleteHeroUseCase, UpdateHeroUseCase updateHeroUseCase) {
+    public HeroController(CreateHeroUseCase createHeroUseCase, FindHeroByIdUseCase findHeroByIdUseCase, DeleteHeroUseCase deleteHeroUseCase, UpdateHeroUseCase updateHeroUseCase, FindHeroByFiltersUseCase findHeroByFiltersUseCase) {
         this.createHeroUseCase = createHeroUseCase;
         this.findHeroByIdUseCase = findHeroByIdUseCase;
         this.deleteHeroUseCase = deleteHeroUseCase;
         this.updateHeroUseCase = updateHeroUseCase;
+        this.findHeroByFiltersUseCase = findHeroByFiltersUseCase;
     }
 
     @PostMapping
@@ -65,5 +70,23 @@ public class HeroController {
         return ResponseEntity
                 .ok()
                 .body(response);
+    }
+
+    @GetMapping
+    public ResponseEntity<Set<HeroResponse>> findAll(HeroFilterRequest filterRequest) {
+
+        Set<Hero> heroSet = findHeroByFiltersUseCase.findFilter(HeroMapper.toFilter(filterRequest));
+
+        if (heroSet.isEmpty()) {
+            return ResponseEntity
+                    .ok().build();
+        }
+
+        Set<HeroResponse> responseSet = heroSet.stream()
+                .map(HeroMapper::toHeroResponse).collect(Collectors.toSet());
+
+        return ResponseEntity
+                .ok()
+                .body(responseSet);
     }
 }

@@ -18,7 +18,6 @@ public class HeroResponse implements Serializable {
     private String name;
     private HeroRaceEnum race;
     private PowerStats powerStats;
-    private boolean enabled;
     private int strength;
     private int agility;
     private int dexterity;

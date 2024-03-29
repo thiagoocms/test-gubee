@@ -1,6 +1,7 @@
 package br.com.gubee.interview.infrastructure.repository;
 
 import br.com.gubee.interview.core.domain.Hero;
+import br.com.gubee.interview.core.domain.HeroFilter;
 import br.com.gubee.interview.core.domain.PowerStats;
 import br.com.gubee.interview.core.domain.enums.HeroRaceEnum;
 import br.com.gubee.interview.core.exception.InternalErrorException;
@@ -9,7 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Timestamp;
-import java.util.UUID;
+import java.util.*;
 
 @Repository
 public class HeroRepository {
@@ -90,6 +91,39 @@ public class HeroRepository {
             return hero;
         } catch (Exception e) {
             throw new InternalErrorException(e.getMessage());
+        }
+    }
+
+    public Set<Hero> findFilter(HeroFilter filter) {
+        StringBuilder sqlBuilder = new StringBuilder("SELECT h.id, h.name, h.race, h.power_stats_id, " +
+                "p.strength, p.agility, p.dexterity, p.intelligence FROM hero h " +
+                "INNER JOIN power_stats p ON h.power_stats_id = p.id WHERE 1=1");
+        List<Object> params = new ArrayList<>();
+
+        if (filter.getName() != null && !filter.getName().isEmpty()) {
+            sqlBuilder.append(" AND h.name LIKE ?");
+            params.add("%" + filter.getName() + "%");
+        }
+
+        try {
+            return new HashSet<>(jdbcTemplate.query(sqlBuilder.toString(), params.toArray(), (rs, rowNum) -> {
+                Hero hero = new Hero();
+                hero.setId(UUID.fromString(rs.getString("id")));
+                hero.setName(rs.getString("name"));
+                hero.setRace(HeroRaceEnum.valueOf(rs.getString("race")));
+
+                PowerStats powerStats = new PowerStats();
+                powerStats.setId(UUID.fromString(rs.getString("power_stats_id")));
+                powerStats.setStrength(rs.getInt("strength"));
+                powerStats.setAgility(rs.getInt("agility"));
+                powerStats.setDexterity(rs.getInt("dexterity"));
+                powerStats.setIntelligence(rs.getInt("intelligence"));
+
+                hero.setPowerStats(powerStats);
+                return hero;
+            }));
+        } catch (Exception e) {
+            return new HashSet<>();
         }
     }
 }
