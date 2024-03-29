@@ -48,7 +48,7 @@ public class PowerStatsRepository {
                 return powerStats;
             });
         } catch (Exception e) {
-            throw new InternalErrorException(e.getMessage());
+            return null;
         }
     }
 }

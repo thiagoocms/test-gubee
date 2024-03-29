@@ -1,489 +1,556 @@
-[32m[INFO ][m [35m[2024-03-28T22:15:53,764] [main] [Application][m Starting Application using Java 17.0.9 with PID 24666 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T22:15:53,773] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T22:15:54,435] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T22:15:54,456] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,034] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,047] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,047] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,049] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,049] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,139] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,139] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 1318 ms 
-[33m[WARN ][m [35m[2024-03-28T22:15:55,262] [main] [AnnotationConfigServletWebServerApplicationContext][m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroController': Unsatisfied dependency expressed through field 'createHeroUseCase': No qualifying bean of type 'br.com.gubee.interview.usecase.CreateHeroUseCase' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,358] [main] [StandardService][m Stopping service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:15:55,386] [main] [ConditionEvaluationReportLogger][m 
+[32m[INFO ][m [35m[2024-03-29T10:00:20,061] [main] [Application][m Starting Application using Java 17.0.9 with PID 7306 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
+[32m[INFO ][m [35m[2024-03-29T10:00:20,097] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2024-03-29T10:00:21,434] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T10:00:21,485] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 37 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,615] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,645] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,646] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,649] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,651] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,854] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2024-03-29T10:00:22,859] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2634 ms 
+[32m[INFO ][m [35m[2024-03-29T10:00:23,419] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T10:00:23,420] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T10:00:23,421] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T10:00:23,459] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[1;31m[ERROR][m [35m[2024-03-29T10:00:24,559] [main] [HikariPool][m HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at br.com.gubee.interview.infrastructure.Application.main(Application.java:12) [classes/:?]
+Caused by: java.net.ConnectException: Conexão recusada
+	at sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	... 50 more
+[33m[WARN ][m [35m[2024-03-29T10:00:24,785] [main] [AnnotationConfigServletWebServerApplicationContext][m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroRepository' defined in file [/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes/br/com/gubee/interview/infrastructure/repository/HeroRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+ 
+[32m[INFO ][m [35m[2024-03-29T10:00:24,797] [main] [StandardService][m Stopping service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:00:24,843] [main] [ConditionEvaluationReportLogger][m 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
-[1;31m[ERROR][m [35m[2024-03-28T22:15:55,418] [main] [LoggingFailureAnalysisReporter][m 
+[1;31m[ERROR][m [35m[2024-03-29T10:00:24,917] [main] [SpringApplication][m Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroRepository' defined in file [/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes/br/com/gubee/interview/infrastructure/repository/HeroRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 
-***************************
-APPLICATION FAILED TO START
-***************************
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at br.com.gubee.interview.infrastructure.Application.main(Application.java:12) [classes/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 
-Description:
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 
-Field createHeroUseCase in br.com.gubee.interview.infrastructure.controller.HeroController required a bean of type 'br.com.gubee.interview.usecase.CreateHeroUseCase' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'br.com.gubee.interview.usecase.CreateHeroUseCase' in your configuration.
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+Caused by: java.net.ConnectException: Conexão recusada
+	at sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[?:?]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
+	at java.net.Socket.connect(Socket.java:633) ~[?:?]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+[32m[INFO ][m [35m[2024-03-29T10:02:11,774] [main] [Application][m Starting Application using Java 17.0.9 with PID 8175 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
+[32m[INFO ][m [35m[2024-03-29T10:02:11,793] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2024-03-29T10:02:13,055] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T10:02:13,094] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,162] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,191] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,192] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,196] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,197] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,365] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,366] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2449 ms 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,857] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,858] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T10:02:14,859] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T10:02:14,899] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[1;31m[ERROR][m [35m[2024-03-29T10:02:16,123] [main] [HikariPool][m HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "gubee"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) [spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) [spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at br.com.gubee.interview.infrastructure.Application.main(Application.java:12) [classes/:?]
+[33m[WARN ][m [35m[2024-03-29T10:02:16,471] [main] [AnnotationConfigServletWebServerApplicationContext][m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroRepository' defined in file [/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes/br/com/gubee/interview/infrastructure/repository/HeroRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: password authentication failed for user "gubee"
+-------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : FATAL: password authentication failed for user "gubee"
  
-[32m[INFO ][m [35m[2024-03-28T22:16:13,614] [main] [Application][m Starting Application using Java 17.0.9 with PID 24805 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T22:16:13,625] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,307] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,330] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,885] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,897] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,897] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,899] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,900] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,991] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T22:16:14,991] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 1314 ms 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,263] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,263] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,263] [main] [VersionPrinter][m  
-[32m[INFO ][m [35m[2024-03-28T22:16:15,279] [main] [HikariDataSource][m HikariPool-1 - Starting... 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,443] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@285a4fe3 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,445] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,464] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
-[33m[WARN ][m [35m[2024-03-28T22:16:15,476] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,630] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.027s) 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,644] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
-[32m[INFO ][m [35m[2024-03-28T22:16:15,645] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
-[32m[INFO ][m [35m[2024-03-28T22:16:16,240] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:16:16,255] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
-[32m[INFO ][m [35m[2024-03-28T22:16:16,266] [main] [Application][m Started Application in 3.104 seconds (process running for 4.58) 
-[32m[INFO ][m [35m[2024-03-28T22:17:15,179] [http-nio-8080-exec-1] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:17:15,180] [http-nio-8080-exec-1] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:17:15,181] [http-nio-8080-exec-1] [DispatcherServlet][m Completed initialization in 1 ms 
-[33m[WARN ][m [35m[2024-03-28T22:17:35,610] [HikariPool-1 housekeeper] [HikariPool][m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s63ms237µs669ns). 
-[1;31m[ERROR][m [35m[2024-03-28T22:17:51,027] [http-nio-8080-exec-1] [[dispatcherServlet]][m Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: br.com.gubee.interview.core.exception.InternalErrorException: Cannot invoke "br.com.gubee.interview.core.domain.PowerStats.setId(java.util.UUID)" because "powerStats" is null] with root cause 
-br.com.gubee.interview.core.exception.InternalErrorException: Cannot invoke "br.com.gubee.interview.core.domain.PowerStats.setId(java.util.UUID)" because "powerStats" is null
-	at br.com.gubee.interview.infrastructure.repository.PowerStatsRepository.create(PowerStatsRepository.java:32) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.9.jar:6.0.9]
-	at br.com.gubee.interview.infrastructure.repository.PowerStatsRepository$$SpringCGLIB$$1.create(<generated>) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-6.0.9.jar:6.0.9]
-	at br.com.gubee.interview.infrastructure.repository.PowerStatsRepository$$SpringCGLIB$$0.create(<generated>) ~[classes/:?]
-	at br.com.gubee.interview.infrastructure.gatewayimpl.CreatePowerStatsGatewayImpl.create(CreatePowerStatsGatewayImpl.java:19) ~[classes/:?]
-	at br.com.gubee.interview.application.usecaseimpl.CreatePowerStatsUseCaseImpl.create(CreatePowerStatsUseCaseImpl.java:17) ~[classes/:?]
-	at br.com.gubee.interview.application.usecaseimpl.CreateHeroUseCaseImpl.create(CreateHeroUseCaseImpl.java:20) ~[classes/:?]
-	at br.com.gubee.interview.infrastructure.controller.HeroController.create(HeroController.java:24) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.8.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at java.lang.Thread.run(Thread.java:840) [?:?]
-[33m[WARN ][m [35m[2024-03-28T22:18:22,639] [HikariPool-1 housekeeper] [HikariPool][m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s29ms339µs641ns). 
-[1;31m[ERROR][m [35m[2024-03-28T22:19:00,406] [http-nio-8080-exec-3] [[dispatcherServlet]][m Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: br.com.gubee.interview.core.exception.InternalErrorException: Cannot invoke "br.com.gubee.interview.core.domain.PowerStats.setId(java.util.UUID)" because "powerStats" is null] with root cause 
-br.com.gubee.interview.core.exception.InternalErrorException: Cannot invoke "br.com.gubee.interview.core.domain.PowerStats.setId(java.util.UUID)" because "powerStats" is null
-	at br.com.gubee.interview.infrastructure.repository.PowerStatsRepository.create(PowerStatsRepository.java:32) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.9.jar:6.0.9]
-	at br.com.gubee.interview.infrastructure.repository.PowerStatsRepository$$SpringCGLIB$$1.create(<generated>) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.9.jar:6.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-6.0.9.jar:6.0.9]
-	at br.com.gubee.interview.infrastructure.repository.PowerStatsRepository$$SpringCGLIB$$0.create(<generated>) ~[classes/:?]
-	at br.com.gubee.interview.infrastructure.gatewayimpl.CreatePowerStatsGatewayImpl.create(CreatePowerStatsGatewayImpl.java:19) ~[classes/:?]
-	at br.com.gubee.interview.application.usecaseimpl.CreatePowerStatsUseCaseImpl.create(CreatePowerStatsUseCaseImpl.java:17) ~[classes/:?]
-	at br.com.gubee.interview.application.usecaseimpl.CreateHeroUseCaseImpl.create(CreateHeroUseCaseImpl.java:20) ~[classes/:?]
-	at br.com.gubee.interview.infrastructure.controller.HeroController.create(HeroController.java:24) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.8.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at java.lang.Thread.run(Thread.java:840) [?:?]
-[32m[INFO ][m [35m[2024-03-28T22:22:42,027] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
-[32m[INFO ][m [35m[2024-03-28T22:22:42,035] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
-[32m[INFO ][m [35m[2024-03-28T22:22:46,356] [main] [Application][m Starting Application using Java 17.0.9 with PID 25172 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T22:22:46,366] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,085] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,105] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,667] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,679] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,679] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,681] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,681] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,774] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T22:22:47,775] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 1359 ms 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,060] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,061] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,061] [main] [VersionPrinter][m  
-[32m[INFO ][m [35m[2024-03-28T22:22:48,077] [main] [HikariDataSource][m HikariPool-1 - Starting... 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,268] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3815146b 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,270] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,292] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
-[33m[WARN ][m [35m[2024-03-28T22:22:48,311] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,468] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.031s) 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,484] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
-[32m[INFO ][m [35m[2024-03-28T22:22:48,485] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
-[32m[INFO ][m [35m[2024-03-28T22:22:49,084] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:22:49,104] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
-[32m[INFO ][m [35m[2024-03-28T22:22:49,116] [main] [Application][m Started Application in 3.24 seconds (process running for 4.705) 
-[32m[INFO ][m [35m[2024-03-28T22:22:52,868] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:22:52,869] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:22:52,870] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 1 ms 
-[1;31m[ERROR][m [35m[2024-03-28T22:23:01,414] [http-nio-8080-exec-2] [[dispatcherServlet]][m Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: br.com.gubee.interview.core.exception.BadRequestException: As habilidades são obrigatórias] with root cause 
-br.com.gubee.interview.core.exception.BadRequestException: As habilidades são obrigatórias
-	at br.com.gubee.interview.application.usecaseimpl.CreatePowerStatsUseCaseImpl.create(CreatePowerStatsUseCaseImpl.java:19) ~[classes/:?]
-	at br.com.gubee.interview.application.usecaseimpl.CreateHeroUseCaseImpl.create(CreateHeroUseCaseImpl.java:24) ~[classes/:?]
-	at br.com.gubee.interview.infrastructure.controller.HeroController.create(HeroController.java:24) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.8.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-10.1.8.jar:10.1.8]
-	at java.lang.Thread.run(Thread.java:840) [?:?]
-[32m[INFO ][m [35m[2024-03-28T22:29:10,335] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
-[32m[INFO ][m [35m[2024-03-28T22:29:10,344] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
-[32m[INFO ][m [35m[2024-03-28T22:29:29,125] [main] [Application][m Starting Application using Java 17.0.9 with PID 25686 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T22:29:29,140] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T22:29:30,270] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T22:29:30,310] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,216] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,237] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,239] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,242] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,243] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,394] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,395] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2172 ms 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,805] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,806] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
-[32m[INFO ][m [35m[2024-03-28T22:29:31,808] [main] [VersionPrinter][m  
-[32m[INFO ][m [35m[2024-03-28T22:29:31,835] [main] [HikariDataSource][m HikariPool-1 - Starting... 
-[32m[INFO ][m [35m[2024-03-28T22:29:32,105] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6870cfac 
-[32m[INFO ][m [35m[2024-03-28T22:29:32,109] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
-[32m[INFO ][m [35m[2024-03-28T22:29:32,140] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
-[33m[WARN ][m [35m[2024-03-28T22:29:32,158] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
-[32m[INFO ][m [35m[2024-03-28T22:29:32,404] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.054s) 
-[32m[INFO ][m [35m[2024-03-28T22:29:32,432] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
-[32m[INFO ][m [35m[2024-03-28T22:29:32,434] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
-[32m[INFO ][m [35m[2024-03-28T22:29:33,366] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:29:33,392] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
-[32m[INFO ][m [35m[2024-03-28T22:29:33,411] [main] [Application][m Started Application in 5.054 seconds (process running for 7.541) 
-[32m[INFO ][m [35m[2024-03-28T22:29:38,211] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:29:38,212] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:29:38,214] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 2 ms 
-[32m[INFO ][m [35m[2024-03-28T22:45:10,107] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
-[32m[INFO ][m [35m[2024-03-28T22:45:10,123] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
-[32m[INFO ][m [35m[2024-03-28T22:45:18,174] [main] [Application][m Starting Application using Java 17.0.9 with PID 26498 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T22:45:18,193] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T22:45:19,327] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T22:45:19,367] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,275] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,297] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,298] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,301] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,302] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,440] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,441] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2161 ms 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,843] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,845] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
-[32m[INFO ][m [35m[2024-03-28T22:45:20,846] [main] [VersionPrinter][m  
-[32m[INFO ][m [35m[2024-03-28T22:45:20,886] [main] [HikariDataSource][m HikariPool-1 - Starting... 
-[32m[INFO ][m [35m[2024-03-28T22:45:21,167] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4270b142 
-[32m[INFO ][m [35m[2024-03-28T22:45:21,172] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
-[32m[INFO ][m [35m[2024-03-28T22:45:21,204] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
-[33m[WARN ][m [35m[2024-03-28T22:45:21,226] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
-[32m[INFO ][m [35m[2024-03-28T22:45:21,493] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.063s) 
-[32m[INFO ][m [35m[2024-03-28T22:45:21,522] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
-[32m[INFO ][m [35m[2024-03-28T22:45:21,524] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
-[32m[INFO ][m [35m[2024-03-28T22:45:22,560] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:45:22,591] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
-[32m[INFO ][m [35m[2024-03-28T22:45:22,610] [main] [Application][m Started Application in 5.162 seconds (process running for 7.535) 
-[32m[INFO ][m [35m[2024-03-28T22:45:34,772] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:45:34,773] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:45:34,775] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 2 ms 
-[33m[WARN ][m [35m[2024-03-28T22:50:11,362] [HikariPool-1 housekeeper] [HikariPool][m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s84ms851µs349ns). 
-[33m[WARN ][m [35m[2024-03-28T22:51:02,817] [HikariPool-1 housekeeper] [HikariPool][m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s455ms179µs613ns). 
-[32m[INFO ][m [35m[2024-03-28T22:52:28,353] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
-[32m[INFO ][m [35m[2024-03-28T22:52:28,363] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
-[32m[INFO ][m [35m[2024-03-28T22:52:35,092] [main] [Application][m Starting Application using Java 17.0.9 with PID 26870 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T22:52:35,108] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T22:52:36,259] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T22:52:36,296] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,222] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,244] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,245] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,248] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,249] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,389] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,390] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2185 ms 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,812] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,814] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
-[32m[INFO ][m [35m[2024-03-28T22:52:37,814] [main] [VersionPrinter][m  
-[32m[INFO ][m [35m[2024-03-28T22:52:37,842] [main] [HikariDataSource][m HikariPool-1 - Starting... 
-[32m[INFO ][m [35m[2024-03-28T22:52:38,118] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6314df3c 
-[32m[INFO ][m [35m[2024-03-28T22:52:38,122] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
-[32m[INFO ][m [35m[2024-03-28T22:52:38,153] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
-[33m[WARN ][m [35m[2024-03-28T22:52:38,172] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
-[32m[INFO ][m [35m[2024-03-28T22:52:38,454] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.077s) 
-[32m[INFO ][m [35m[2024-03-28T22:52:38,489] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
-[32m[INFO ][m [35m[2024-03-28T22:52:38,491] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
-[32m[INFO ][m [35m[2024-03-28T22:52:39,440] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T22:52:39,471] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
-[32m[INFO ][m [35m[2024-03-28T22:52:39,491] [main] [Application][m Started Application in 5.124 seconds (process running for 7.445) 
-[32m[INFO ][m [35m[2024-03-28T22:52:51,150] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:52:51,151] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T22:52:51,153] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 1 ms 
-[32m[INFO ][m [35m[2024-03-28T23:07:26,851] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
-[32m[INFO ][m [35m[2024-03-28T23:07:26,860] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
-[32m[INFO ][m [35m[2024-03-28T23:07:34,150] [main] [Application][m Starting Application using Java 17.0.9 with PID 27360 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T23:07:34,166] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T23:07:35,321] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T23:07:35,362] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,376] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,400] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,401] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,404] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,406] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,562] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,563] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2294 ms 
-[33m[WARN ][m [35m[2024-03-28T23:07:36,807] [main] [AnnotationConfigServletWebServerApplicationContext][m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroController' defined in file [/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes/br/com/gubee/interview/infrastructure/controller/HeroController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'br.com.gubee.interview.infrastructure.mapper.HeroMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,958] [main] [StandardService][m Stopping service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T23:07:36,995] [main] [ConditionEvaluationReportLogger][m 
+[32m[INFO ][m [35m[2024-03-29T10:02:16,511] [main] [StandardService][m Stopping service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:02:16,552] [main] [ConditionEvaluationReportLogger][m 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
-[1;31m[ERROR][m [35m[2024-03-28T23:07:37,044] [main] [LoggingFailureAnalysisReporter][m 
+[1;31m[ERROR][m [35m[2024-03-29T10:02:16,609] [main] [SpringApplication][m Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroRepository' defined in file [/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes/br/com/gubee/interview/infrastructure/repository/HeroRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: password authentication failed for user "gubee"
+-------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : FATAL: password authentication failed for user "gubee"
 
-***************************
-APPLICATION FAILED TO START
-***************************
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305) [spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294) [spring-boot-3.1.0.jar:3.1.0]
+	at br.com.gubee.interview.infrastructure.Application.main(Application.java:12) [classes/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: FATAL: password authentication failed for user "gubee"
+-------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : FATAL: password authentication failed for user "gubee"
 
-Description:
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: FATAL: password authentication failed for user "gubee"
+-------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : FATAL: password authentication failed for user "gubee"
 
-Parameter 1 of constructor in br.com.gubee.interview.infrastructure.controller.HeroController required a bean of type 'br.com.gubee.interview.infrastructure.mapper.HeroMapper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'br.com.gubee.interview.infrastructure.mapper.HeroMapper' in your configuration.
- 
-[32m[INFO ][m [35m[2024-03-28T23:08:37,174] [main] [Application][m Starting Application using Java 17.0.9 with PID 27487 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T23:08:37,190] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T23:08:38,313] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T23:08:38,357] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,275] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,297] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,298] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,300] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,302] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,446] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,447] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2163 ms 
-[33m[WARN ][m [35m[2024-03-28T23:08:39,663] [main] [AnnotationConfigServletWebServerApplicationContext][m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heroController' defined in file [/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes/br/com/gubee/interview/infrastructure/controller/HeroController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'br.com.gubee.interview.infrastructure.mapper.HeroMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,805] [main] [StandardService][m Stopping service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T23:08:39,839] [main] [ConditionEvaluationReportLogger][m 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
-[1;31m[ERROR][m [35m[2024-03-28T23:08:39,880] [main] [LoggingFailureAnalysisReporter][m 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in br.com.gubee.interview.infrastructure.controller.HeroController required a bean of type 'br.com.gubee.interview.infrastructure.mapper.HeroMapper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'br.com.gubee.interview.infrastructure.mapper.HeroMapper' in your configuration.
- 
-[32m[INFO ][m [35m[2024-03-28T23:09:37,769] [main] [Application][m Starting Application using Java 17.0.9 with PID 27658 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
-[32m[INFO ][m [35m[2024-03-28T23:09:37,788] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,013] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,052] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces. 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,965] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,988] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,989] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,992] [main] [StandardService][m Starting service [Tomcat] 
-[32m[INFO ][m [35m[2024-03-28T23:09:39,993] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,130] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,131] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2218 ms 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,534] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,535] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,535] [main] [VersionPrinter][m  
-[32m[INFO ][m [35m[2024-03-28T23:09:40,562] [main] [HikariDataSource][m HikariPool-1 - Starting... 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,844] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4270b142 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,848] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
-[32m[INFO ][m [35m[2024-03-28T23:09:40,879] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
-[33m[WARN ][m [35m[2024-03-28T23:09:40,898] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
-[32m[INFO ][m [35m[2024-03-28T23:09:41,144] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.054s) 
-[32m[INFO ][m [35m[2024-03-28T23:09:41,171] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
-[32m[INFO ][m [35m[2024-03-28T23:09:41,173] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
-[32m[INFO ][m [35m[2024-03-28T23:09:42,099] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
-[32m[INFO ][m [35m[2024-03-28T23:09:42,126] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
-[32m[INFO ][m [35m[2024-03-28T23:09:42,144] [main] [Application][m Started Application in 5.216 seconds (process running for 7.552) 
-[32m[INFO ][m [35m[2024-03-28T23:09:52,952] [http-nio-8080-exec-1] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T23:09:52,953] [http-nio-8080-exec-1] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
-[32m[INFO ][m [35m[2024-03-28T23:09:52,955] [http-nio-8080-exec-1] [DispatcherServlet][m Completed initialization in 2 ms 
-[32m[INFO ][m [35m[2024-03-28T23:11:21,208] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
-[32m[INFO ][m [35m[2024-03-28T23:11:21,222] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "gubee"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.0.jar:3.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.9.jar:6.0.9]
+	... 19 more
+[32m[INFO ][m [35m[2024-03-29T10:03:40,414] [main] [Application][m Starting Application using Java 17.0.9 with PID 8318 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
+[32m[INFO ][m [35m[2024-03-29T10:03:40,429] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2024-03-29T10:03:41,590] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T10:03:41,629] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,700] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,725] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,726] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,730] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,731] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,887] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2024-03-29T10:03:42,888] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2379 ms 
+[32m[INFO ][m [35m[2024-03-29T10:03:43,443] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T10:03:43,444] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T10:03:43,445] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T10:03:43,477] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T10:03:43,823] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64656b9e 
+[32m[INFO ][m [35m[2024-03-29T10:03:43,828] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T10:03:43,866] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T10:03:43,885] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,138] [main] [JdbcTableSchemaHistory][m Schema history table "interview_service"."flyway_schema_history" does not exist yet 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,147] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.047s) 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,176] [main] [JdbcTableSchemaHistory][m Creating Schema History table "interview_service"."flyway_schema_history" ... 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,264] [main] [DbMigrate][m Current version of schema "interview_service": << Empty Schema >> 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,276] [main] [DbMigrate][m Migrating schema "interview_service" to version "1.0 - power stats ddl" 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,318] [main] [DbMigrate][m Migrating schema "interview_service" to version "1.1 - hero ddl" 
+[32m[INFO ][m [35m[2024-03-29T10:03:44,358] [main] [DbMigrate][m Successfully applied 2 migrations to schema "interview_service", now at version v1.1 (execution time 00:00.107s) 
+[32m[INFO ][m [35m[2024-03-29T10:03:45,486] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:03:45,516] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
+[32m[INFO ][m [35m[2024-03-29T10:03:45,540] [main] [Application][m Started Application in 5.856 seconds (process running for 8.846) 
+[32m[INFO ][m [35m[2024-03-29T10:07:06,520] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:07:06,521] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:07:06,523] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 2 ms 
+[33m[WARN ][m [35m[2024-03-29T10:10:35,078] [HikariPool-1 housekeeper] [HikariPool][m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s601ms961µs301ns). 
+[32m[INFO ][m [35m[2024-03-29T10:11:11,087] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T10:11:11,106] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T10:11:20,024] [main] [Application][m Starting Application using Java 17.0.9 with PID 9109 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
+[32m[INFO ][m [35m[2024-03-29T10:11:20,040] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2024-03-29T10:11:21,330] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T10:11:21,372] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,360] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,382] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,383] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,387] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,388] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,533] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,534] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2403 ms 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,994] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,995] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T10:11:22,996] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T10:11:23,023] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T10:11:23,307] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6870cfac 
+[32m[INFO ][m [35m[2024-03-29T10:11:23,311] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T10:11:23,343] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T10:11:23,362] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T10:11:23,614] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.049s) 
+[32m[INFO ][m [35m[2024-03-29T10:11:23,640] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T10:11:23,642] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T10:11:24,651] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:11:24,683] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
+[32m[INFO ][m [35m[2024-03-29T10:11:24,702] [main] [Application][m Started Application in 5.371 seconds (process running for 8.24) 
+[32m[INFO ][m [35m[2024-03-29T10:13:41,943] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:13:41,945] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:13:41,948] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 3 ms 
+[32m[INFO ][m [35m[2024-03-29T10:28:40,446] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T10:28:40,456] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T10:28:50,033] [main] [Application][m Starting Application using Java 17.0.9 with PID 9684 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
+[32m[INFO ][m [35m[2024-03-29T10:28:50,056] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2024-03-29T10:28:51,318] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T10:28:51,355] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,287] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,308] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,309] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,312] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,313] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,462] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,463] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2284 ms 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,886] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,887] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T10:28:52,891] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T10:28:52,919] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T10:28:53,202] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2dd178f3 
+[32m[INFO ][m [35m[2024-03-29T10:28:53,207] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T10:28:53,241] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T10:28:53,262] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T10:28:53,541] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.060s) 
+[32m[INFO ][m [35m[2024-03-29T10:28:53,570] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T10:28:53,572] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T10:28:54,550] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:28:54,580] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
+[32m[INFO ][m [35m[2024-03-29T10:28:54,600] [main] [Application][m Started Application in 5.451 seconds (process running for 8.178) 
+[32m[INFO ][m [35m[2024-03-29T10:29:00,188] [http-nio-8080-exec-1] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:29:00,189] [http-nio-8080-exec-1] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:29:00,191] [http-nio-8080-exec-1] [DispatcherServlet][m Completed initialization in 2 ms 
+[32m[INFO ][m [35m[2024-03-29T10:55:31,907] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T10:55:31,918] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
+[32m[INFO ][m [35m[2024-03-29T10:55:41,997] [main] [Application][m Starting Application using Java 17.0.9 with PID 10509 (/home/thiagoocms/Documentos/develop/test-gubee/infrastructure/target/classes started by thiagoocms in /home/thiagoocms/Documentos/develop/test-gubee) 
+[32m[INFO ][m [35m[2024-03-29T10:55:42,013] [main] [Application][m No active profile set, falling back to 1 default profile: "default" 
+[32m[INFO ][m [35m[2024-03-29T10:55:43,266] [main] [RepositoryConfigurationDelegate][m Bootstrapping Spring Data JDBC repositories in DEFAULT mode. 
+[32m[INFO ][m [35m[2024-03-29T10:55:43,306] [main] [RepositoryConfigurationDelegate][m Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces. 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,370] [main] [TomcatWebServer][m Tomcat initialized with port(s): 8080 (http) 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,399] [main] [Http11NioProtocol][m The ["http-nio-8080"] connector has been configured to support HTTP upgrade to [h2c] 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,400] [main] [Http11NioProtocol][m Initializing ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,405] [main] [StandardService][m Starting service [Tomcat] 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,406] [main] [StandardEngine][m Starting Servlet engine: [Apache Tomcat/10.1.8] 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,577] [main] [[/]][m Initializing Spring embedded WebApplicationContext 
+[32m[INFO ][m [35m[2024-03-29T10:55:44,578] [main] [ServletWebServerApplicationContext][m Root WebApplicationContext: initialization completed in 2461 ms 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,019] [main] [VersionPrinter][m Flyway Community Edition 9.16.3 by Redgate 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,021] [main] [VersionPrinter][m See release notes here: https://rd.gt/416ObMi 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,022] [main] [VersionPrinter][m  
+[32m[INFO ][m [35m[2024-03-29T10:55:45,051] [main] [HikariDataSource][m HikariPool-1 - Starting... 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,338] [main] [HikariPool][m HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52354202 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,343] [main] [HikariDataSource][m HikariPool-1 - Start completed. 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,377] [main] [BaseDatabaseType][m Database: jdbc:postgresql://localhost:5432/postgres (PostgreSQL 16.2) 
+[33m[WARN ][m [35m[2024-03-29T10:55:45,411] [main] [Database][m Flyway upgrade recommended: PostgreSQL 16.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15. 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,674] [main] [DbValidate][m Successfully validated 2 migrations (execution time 00:00.061s) 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,702] [main] [DbMigrate][m Current version of schema "interview_service": 1.1 
+[32m[INFO ][m [35m[2024-03-29T10:55:45,703] [main] [DbMigrate][m Schema "interview_service" is up to date. No migration necessary. 
+[32m[INFO ][m [35m[2024-03-29T10:55:46,923] [main] [Http11NioProtocol][m Starting ProtocolHandler ["http-nio-8080"] 
+[32m[INFO ][m [35m[2024-03-29T10:55:46,954] [main] [TomcatWebServer][m Tomcat started on port(s): 8080 (http) with context path '' 
+[32m[INFO ][m [35m[2024-03-29T10:55:46,973] [main] [Application][m Started Application in 5.8 seconds (process running for 8.443) 
+[32m[INFO ][m [35m[2024-03-29T10:56:31,963] [http-nio-8080-exec-2] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:56:31,964] [http-nio-8080-exec-2] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
+[32m[INFO ][m [35m[2024-03-29T10:56:31,966] [http-nio-8080-exec-2] [DispatcherServlet][m Completed initialization in 2 ms 

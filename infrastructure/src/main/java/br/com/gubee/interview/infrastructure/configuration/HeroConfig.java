@@ -1,12 +1,9 @@
 package br.com.gubee.interview.infrastructure.configuration;
 
-import br.com.gubee.interview.application.gateway.CreateHeroGateway;
-import br.com.gubee.interview.application.gateway.CreatePowerStatsGateway;
-import br.com.gubee.interview.application.usecaseimpl.CreateHeroUseCaseImpl;
-import br.com.gubee.interview.application.usecaseimpl.CreatePowerStatsUseCaseImpl;
+import br.com.gubee.interview.application.gateway.*;
+import br.com.gubee.interview.application.usecaseimpl.*;
 import br.com.gubee.interview.application.validation.HeroValidation;
-import br.com.gubee.interview.usecase.CreateHeroUseCase;
-import br.com.gubee.interview.usecase.CreatePowerStatsUseCase;
+import br.com.gubee.interview.usecase.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,8 +19,23 @@ public class HeroConfig {
     public HeroValidation heroValidation(){
         return new HeroValidation();
     }
+
     @Bean
-    public CreateHeroUseCase createHeroUseCase(CreateHeroGateway createHeroGateway, CreatePowerStatsUseCase createPowerStatsUseCase, HeroValidation heroValidation) {
-        return new CreateHeroUseCaseImpl(createHeroGateway, createPowerStatsUseCase, heroValidation);
+    public ExistHeroByNameUseCase existHeroByNameUseCase(ExistHeroByNameGateway existHeroByNameGateway) {
+        return new ExistHeroByNameUserCaseImpl(existHeroByNameGateway);
+    }
+    @Bean
+    public CreateHeroUseCase createHeroUseCase(CreateHeroGateway createHeroGateway, CreatePowerStatsUseCase createPowerStatsUseCase, HeroValidation heroValidation, ExistHeroByNameUseCase existHeroByNameUseCase) {
+        return new CreateHeroUseCaseImpl(createHeroGateway, createPowerStatsUseCase, heroValidation, existHeroByNameUseCase);
+    }
+
+    @Bean
+    public FindPowerStatsByIdUseCase findPowerStatsByIdUseCase(FindPowerStatsByIdGateway findPowerStatsByIdGateway) {
+        return new FindPowerStatsByIdUserCaseImpl(findPowerStatsByIdGateway);
+    }
+
+    @Bean
+    public FindHeroByIdUseCase findHeroByIdUseCase(FindHeroByIdGateway findHeroByIdGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
+        return new FindHeroByIdUserCaseImpl(findHeroByIdGateway, findPowerStatsByIdUseCase);
     }
 }

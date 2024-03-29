@@ -53,4 +53,23 @@ public class HeroRepository {
             throw new InternalErrorException(e.getMessage());
         }
     }
+
+    public Hero findByName(String name) {
+        String selectSql = "SELECT * FROM hero WHERE name = ?";
+        try {
+            return jdbcTemplate.queryForObject(selectSql, new Object[]{name}, (rs, rowNum) -> {
+                Hero hero = new Hero();
+                hero.setId(UUID.fromString(rs.getString("id")));
+                hero.setName(rs.getString("name"));
+                hero.setRace(HeroRaceEnum.valueOf(rs.getString("race")));
+                hero.setPowerStats(new PowerStats(UUID.fromString(rs.getString("power_stats_id"))));
+                hero.setEnabled(rs.getBoolean("enabled"));
+                hero.setCreatedAt(rs.getObject("created_at", Timestamp.class).toLocalDateTime());
+                hero.setUpdatedAt(rs.getObject("updated_at", Timestamp.class).toLocalDateTime());
+                return hero;
+            });
+        } catch (Exception e) {
+           return null;
+        }
+    }
 }

@@ -3,30 +3,45 @@ package br.com.gubee.interview.infrastructure.controller;
 import br.com.gubee.interview.core.domain.Hero;
 import br.com.gubee.interview.infrastructure.constants.AppConstants;
 import br.com.gubee.interview.infrastructure.dto.HeroRequest;
+import br.com.gubee.interview.infrastructure.dto.HeroResponse;
 import br.com.gubee.interview.infrastructure.mapper.HeroMapper;
 import br.com.gubee.interview.usecase.CreateHeroUseCase;
-import org.springframework.beans.factory.annotation.Autowired;
+import br.com.gubee.interview.usecase.FindHeroByIdUseCase;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(value = AppConstants.PATH + AppConstants.API + AppConstants.V1 + "/heroes")
 public class HeroController {
 
-    @Autowired
-    private  CreateHeroUseCase createHeroUseCase;
+    private final CreateHeroUseCase createHeroUseCase;
+    private final FindHeroByIdUseCase findHeroByIdUseCase;
 
+    public HeroController(CreateHeroUseCase createHeroUseCase, FindHeroByIdUseCase findHeroByIdUseCase) {
+        this.createHeroUseCase = createHeroUseCase;
+        this.findHeroByIdUseCase = findHeroByIdUseCase;
+    }
 
     @PostMapping
-    public ResponseEntity<Hero> create(@RequestBody HeroRequest heroRequest) throws Throwable {
+    @Transactional
+    public ResponseEntity<HeroResponse> create(@RequestBody HeroRequest heroRequest) throws Throwable {
         Hero hero = createHeroUseCase.create(HeroMapper.toHero(heroRequest));
+        HeroResponse heroResponse = HeroMapper.toHeroResponse(hero);
         return ResponseEntity
                 .created(URI.create("/heroes"))
-                .body(hero);
+                .body(heroResponse);
+    }
+
+    @GetMapping("/{id}")
+    @Transactional(readOnly = true)
+    public ResponseEntity<HeroResponse> findById(@PathVariable UUID id) throws Throwable {
+        HeroResponse response = HeroMapper.toHeroResponse(findHeroByIdUseCase.findById(id));
+        return ResponseEntity
+                .ok()
+                .body(response);
     }
 }

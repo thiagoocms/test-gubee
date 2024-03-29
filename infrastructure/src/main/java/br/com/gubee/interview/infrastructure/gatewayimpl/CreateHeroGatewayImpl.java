@@ -24,8 +24,6 @@ public class CreateHeroGatewayImpl implements CreateHeroGateway {
 
     @Override
     public Hero create(Hero hero) {
-        PowerStats powerStats = createPowerStatsGateway.create(hero.getPowerStats());
-        hero.setPowerStats(powerStats);
         return heroRepository.create(hero);
     }
 }

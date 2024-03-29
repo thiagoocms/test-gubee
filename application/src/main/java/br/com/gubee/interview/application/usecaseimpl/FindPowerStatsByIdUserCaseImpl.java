@@ -19,7 +19,7 @@ public class FindPowerStatsByIdUserCaseImpl implements FindPowerStatsByIdUseCase
     public PowerStats findById(UUID id) {
         PowerStats powerStats = this.powerStatsByIdGateway.findById(id);
         if (powerStats == null) {
-            throw new ResourceNotFoundException("");
+            throw new ResourceNotFoundException("Habilidades desse heroi não encontradas");
         }
         return powerStats;
     }

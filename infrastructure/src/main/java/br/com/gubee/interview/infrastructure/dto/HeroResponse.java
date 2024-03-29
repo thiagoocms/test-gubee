@@ -12,7 +12,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class HeroRequest implements Serializable {
+public class HeroResponse implements Serializable {
 
     private UUID heroId;
     private String name;
