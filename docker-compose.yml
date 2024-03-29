@@ -1,0 +1,37 @@
+version: '1'
+services:
+  interview-postgres-it:
+    image: postgres:13.2-alpine
+    container_name: interview-postgres-it
+    build:
+      context: /infrastructure/src/main/resources/db/schema/
+      dockerfile: Dockerfile
+    networks:
+      - interview-network
+    environment:
+      POSTGRES_USERNAME: gubee
+      POSTGRES_PASSWORD: gubee
+    ports:
+      - "5432:5432"
+    volumes:
+      - infrastructure/src/main/resources/db/schema/init_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql:z
+  interview-api:
+    image: thiagoocms/test-gubee:lasted
+    container_name: interview-api
+    ports:
+      - "8080:8080"
+    networks:
+      - interview-network
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  interview-network:
+    driver: bridge
