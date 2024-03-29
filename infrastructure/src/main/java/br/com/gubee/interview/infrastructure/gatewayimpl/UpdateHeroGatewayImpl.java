@@ -1,27 +1,27 @@
 package br.com.gubee.interview.infrastructure.gatewayimpl;
 
-import br.com.gubee.interview.application.gateway.CreateHeroGateway;
-import br.com.gubee.interview.application.gateway.CreatePowerStatsGateway;
+import br.com.gubee.interview.application.gateway.UpdateHeroGateway;
 import br.com.gubee.interview.core.domain.Hero;
-import br.com.gubee.interview.core.domain.PowerStats;
 import br.com.gubee.interview.infrastructure.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
-public class CreateHeroGatewayImpl implements CreateHeroGateway {
+public class UpdateHeroGatewayImpl implements UpdateHeroGateway {
 
     private final HeroRepository heroRepository;
 
     @Lazy
     @Autowired
-    public CreateHeroGatewayImpl(HeroRepository heroRepository) {
+    public UpdateHeroGatewayImpl(HeroRepository heroRepository) {
         this.heroRepository = heroRepository;
     }
 
     @Override
-    public Hero create(Hero hero) {
-        return heroRepository.create(hero);
+    public Hero updateById(UUID id, Hero hero) {
+        return heroRepository.update(id, hero);
     }
 }

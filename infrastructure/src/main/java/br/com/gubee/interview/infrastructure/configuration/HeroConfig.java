@@ -48,4 +48,14 @@ public class HeroConfig {
     public DeleteHeroUseCase deleteHeroUseCase(DeleteHeroGateway deleteHeroGateway, DeletePowerStatsUseCase deletePowerStatsUseCase, FindHeroByIdUseCase findHeroByIdUseCase) {
         return new DeleteHeroUserCaseImpl(deleteHeroGateway, deletePowerStatsUseCase, findHeroByIdUseCase);
     }
+
+    @Bean
+    public  UpdatePowerStatsUseCase updatePowerStatsUseCase(UpdatePowerStatsGateway updatePowerStatsGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
+        return new UpdatePowerStatsUseCaseImpl(updatePowerStatsGateway, findPowerStatsByIdUseCase);
+    }
+
+    @Bean
+    public UpdateHeroUseCase updateHeroUseCase(UpdateHeroGateway updateHeroGateway, UpdatePowerStatsUseCase updatePowerStatsUseCase, FindHeroByIdUseCase findHeroByIdUseCase) {
+        return new UpdateHeroUseCaseImpl(updateHeroGateway, updatePowerStatsUseCase, findHeroByIdUseCase);
+    }
 }

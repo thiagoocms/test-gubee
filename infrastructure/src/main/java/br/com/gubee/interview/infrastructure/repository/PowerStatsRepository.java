@@ -60,4 +60,16 @@ public class PowerStatsRepository {
             throw new InternalErrorException("Falha ao tentar apagar as habilidades do heroi com o id: " + id);
         }
     }
+
+    public PowerStats update(UUID id, PowerStats powerStats) {
+        String sql = "UPDATE power_stats SET strength = ?, agility = ?, dexterity = ?, intelligence = ?, updated_at = ? WHERE id = ?";
+        try {
+            jdbcTemplate.update(sql, powerStats.getStrength(), powerStats.getAgility(), powerStats.getDexterity(),
+                    powerStats.getIntelligence(), Timestamp.valueOf(powerStats.getUpdatedAt()), id);
+            return powerStats;
+        } catch (Exception e) {
+            throw new InternalErrorException(e.getMessage());
+        }
+    }
+
 }

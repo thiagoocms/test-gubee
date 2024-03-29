@@ -8,6 +8,7 @@ import br.com.gubee.interview.infrastructure.mapper.HeroMapper;
 import br.com.gubee.interview.usecase.CreateHeroUseCase;
 import br.com.gubee.interview.usecase.DeleteHeroUseCase;
 import br.com.gubee.interview.usecase.FindHeroByIdUseCase;
+import br.com.gubee.interview.usecase.UpdateHeroUseCase;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,11 +24,13 @@ public class HeroController {
     private final CreateHeroUseCase createHeroUseCase;
     private final FindHeroByIdUseCase findHeroByIdUseCase;
     private final DeleteHeroUseCase deleteHeroUseCase;
+    private final UpdateHeroUseCase updateHeroUseCase;
 
-    public HeroController(CreateHeroUseCase createHeroUseCase, FindHeroByIdUseCase findHeroByIdUseCase, DeleteHeroUseCase deleteHeroUseCase) {
+    public HeroController(CreateHeroUseCase createHeroUseCase, FindHeroByIdUseCase findHeroByIdUseCase, DeleteHeroUseCase deleteHeroUseCase, UpdateHeroUseCase updateHeroUseCase) {
         this.createHeroUseCase = createHeroUseCase;
         this.findHeroByIdUseCase = findHeroByIdUseCase;
         this.deleteHeroUseCase = deleteHeroUseCase;
+        this.updateHeroUseCase = updateHeroUseCase;
     }
 
     @PostMapping
@@ -42,7 +45,7 @@ public class HeroController {
 
     @GetMapping("/{id}")
     @Transactional(readOnly = true)
-    public ResponseEntity<HeroResponse> findById(@PathVariable UUID id) throws Throwable {
+    public ResponseEntity<HeroResponse> findById(@PathVariable UUID id) {
         HeroResponse response = HeroMapper.toHeroResponse(findHeroByIdUseCase.findById(id));
         return ResponseEntity
                 .ok()
@@ -50,10 +53,17 @@ public class HeroController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable UUID id) throws Throwable {
-
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
         deleteHeroUseCase.deleteById(id);
-
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<HeroResponse> update(@PathVariable UUID id, @RequestBody HeroRequest request) {
+        Hero hero = updateHeroUseCase.updateById(id, HeroMapper.toHero(request));
+        HeroResponse response = HeroMapper.toHeroResponse(hero);
+        return ResponseEntity
+                .ok()
+                .body(response);
     }
 }

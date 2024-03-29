@@ -81,4 +81,15 @@ public class HeroRepository {
             throw new InternalErrorException("Falha ao tentar apagar o heroi com o id: " + id);
         }
     }
+
+    public Hero update(UUID id, Hero hero) {
+        String sql = "UPDATE hero SET name = ?, race = ?, power_stats_id = ?, enabled = ?, updated_at = ? WHERE id = ?";
+        try {
+            jdbcTemplate.update(sql, hero.getName(), hero.getRace().name(), hero.getPowerStats().getId(),
+                    hero.isEnabled(), Timestamp.valueOf(hero.getUpdatedAt()), id);
+            return hero;
+        } catch (Exception e) {
+            throw new InternalErrorException(e.getMessage());
+        }
+    }
 }
