@@ -7,11 +7,11 @@ import br.com.gubee.interview.usecase.FindPowerStatsByIdUseCase;
 
 import java.util.UUID;
 
-public class FindPowerStatsByIdUserCaseImpl implements FindPowerStatsByIdUseCase {
+public class FindPowerStatsByIdUseCaseImpl implements FindPowerStatsByIdUseCase {
 
     private final FindPowerStatsByIdGateway powerStatsByIdGateway;
 
-    public FindPowerStatsByIdUserCaseImpl(FindPowerStatsByIdGateway powerStatsByIdGateway) {
+    public FindPowerStatsByIdUseCaseImpl(FindPowerStatsByIdGateway powerStatsByIdGateway) {
         this.powerStatsByIdGateway = powerStatsByIdGateway;
     }
 

@@ -1,19 +1,15 @@
 package br.com.gubee.interview.application.usecaseimpl;
 
 import br.com.gubee.interview.application.gateway.ExistHeroByNameGateway;
-import br.com.gubee.interview.application.gateway.FindHeroByNameGateway;
 import br.com.gubee.interview.core.domain.Hero;
 import br.com.gubee.interview.core.exception.BadRequestException;
 import br.com.gubee.interview.usecase.ExistHeroByNameUseCase;
-import br.com.gubee.interview.usecase.FindHeroByNameUseCase;
 
-import java.util.Set;
-
-public class ExistHeroByNameUserCaseImpl implements ExistHeroByNameUseCase {
+public class ExistHeroByNameUseCaseImpl implements ExistHeroByNameUseCase {
 
     private final ExistHeroByNameGateway existHeroByNameGateway;
 
-    public ExistHeroByNameUserCaseImpl(ExistHeroByNameGateway existHeroByNameGateway) {
+    public ExistHeroByNameUseCaseImpl(ExistHeroByNameGateway existHeroByNameGateway) {
         this.existHeroByNameGateway = existHeroByNameGateway;
     }
 

@@ -22,7 +22,7 @@ public class HeroConfig {
 
     @Bean
     public ExistHeroByNameUseCase existHeroByNameUseCase(ExistHeroByNameGateway existHeroByNameGateway) {
-        return new ExistHeroByNameUserCaseImpl(existHeroByNameGateway);
+        return new ExistHeroByNameUseCaseImpl(existHeroByNameGateway);
     }
     @Bean
     public CreateHeroUseCase createHeroUseCase(CreateHeroGateway createHeroGateway, CreatePowerStatsUseCase createPowerStatsUseCase, HeroValidation heroValidation, ExistHeroByNameUseCase existHeroByNameUseCase) {
@@ -31,22 +31,22 @@ public class HeroConfig {
 
     @Bean
     public FindPowerStatsByIdUseCase findPowerStatsByIdUseCase(FindPowerStatsByIdGateway findPowerStatsByIdGateway) {
-        return new FindPowerStatsByIdUserCaseImpl(findPowerStatsByIdGateway);
+        return new FindPowerStatsByIdUseCaseImpl(findPowerStatsByIdGateway);
     }
 
     @Bean
     public FindHeroByIdUseCase findHeroByIdUseCase(FindHeroByIdGateway findHeroByIdGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
-        return new FindHeroByIdUserCaseImpl(findHeroByIdGateway, findPowerStatsByIdUseCase);
+        return new FindHeroByIdUseCaseImpl(findHeroByIdGateway, findPowerStatsByIdUseCase);
     }
 
     @Bean
     public DeletePowerStatsUseCase deletePowerStatsUseCase(DeletePowerStatsGateway deletePowerStatsGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
-        return new DeletePowerStatsUserCaseImpl(deletePowerStatsGateway, findPowerStatsByIdUseCase);
+        return new DeletePowerStatsUseCaseImpl(deletePowerStatsGateway, findPowerStatsByIdUseCase);
     }
 
     @Bean
     public DeleteHeroUseCase deleteHeroUseCase(DeleteHeroGateway deleteHeroGateway, DeletePowerStatsUseCase deletePowerStatsUseCase, FindHeroByIdUseCase findHeroByIdUseCase) {
-        return new DeleteHeroUserCaseImpl(deleteHeroGateway, deletePowerStatsUseCase, findHeroByIdUseCase);
+        return new DeleteHeroUseCaseImpl(deleteHeroGateway, deletePowerStatsUseCase, findHeroByIdUseCase);
     }
 
     @Bean

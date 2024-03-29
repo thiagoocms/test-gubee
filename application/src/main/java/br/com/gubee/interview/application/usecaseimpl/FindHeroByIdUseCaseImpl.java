@@ -9,12 +9,12 @@ import br.com.gubee.interview.usecase.FindPowerStatsByIdUseCase;
 
 import java.util.UUID;
 
-public class FindHeroByIdUserCaseImpl implements FindHeroByIdUseCase {
+public class FindHeroByIdUseCaseImpl implements FindHeroByIdUseCase {
 
     private final FindHeroByIdGateway findHeroByIdGateway;
     private final FindPowerStatsByIdUseCase findPowerStatsByIdUseCase;
 
-    public FindHeroByIdUserCaseImpl(FindHeroByIdGateway findHeroByIdGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
+    public FindHeroByIdUseCaseImpl(FindHeroByIdGateway findHeroByIdGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
         this.findHeroByIdGateway = findHeroByIdGateway;
         this.findPowerStatsByIdUseCase = findPowerStatsByIdUseCase;
     }

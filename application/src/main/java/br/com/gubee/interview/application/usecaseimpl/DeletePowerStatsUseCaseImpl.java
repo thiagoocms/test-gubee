@@ -7,12 +7,12 @@ import br.com.gubee.interview.usecase.FindPowerStatsByIdUseCase;
 
 import java.util.UUID;
 
-public class DeletePowerStatsUserCaseImpl implements DeletePowerStatsUseCase {
+public class DeletePowerStatsUseCaseImpl implements DeletePowerStatsUseCase {
 
     private final DeletePowerStatsGateway deletePowerStatsGateway;
     private final FindPowerStatsByIdUseCase findPowerStatsByIdUseCase;
 
-    public DeletePowerStatsUserCaseImpl(DeletePowerStatsGateway deletePowerStatsGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
+    public DeletePowerStatsUseCaseImpl(DeletePowerStatsGateway deletePowerStatsGateway, FindPowerStatsByIdUseCase findPowerStatsByIdUseCase) {
         this.deletePowerStatsGateway = deletePowerStatsGateway;
         this.findPowerStatsByIdUseCase = findPowerStatsByIdUseCase;
     }

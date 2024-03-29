@@ -8,13 +8,13 @@ import br.com.gubee.interview.usecase.FindHeroByIdUseCase;
 
 import java.util.UUID;
 
-public class DeleteHeroUserCaseImpl implements DeleteHeroUseCase {
+public class DeleteHeroUseCaseImpl implements DeleteHeroUseCase {
 
     private final DeleteHeroGateway deleteHeroGateway;
     private final DeletePowerStatsUseCase deletePowerStatsUseCase;
     private final FindHeroByIdUseCase findHeroByIdUseCase;
 
-    public DeleteHeroUserCaseImpl(DeleteHeroGateway deleteHeroGateway, DeletePowerStatsUseCase deletePowerStatsUseCase, FindHeroByIdUseCase findHeroByIdUseCase) {
+    public DeleteHeroUseCaseImpl(DeleteHeroGateway deleteHeroGateway, DeletePowerStatsUseCase deletePowerStatsUseCase, FindHeroByIdUseCase findHeroByIdUseCase) {
         this.deleteHeroGateway = deleteHeroGateway;
         this.deletePowerStatsUseCase = deletePowerStatsUseCase;
         this.findHeroByIdUseCase = findHeroByIdUseCase;
