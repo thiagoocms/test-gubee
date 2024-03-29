@@ -1453,3 +1453,5 @@ Consider defining a bean of type 'br.com.gubee.interview.usecase.CompareHeroUseC
 [32m[INFO ][m [35m[2024-03-29T16:11:18,586] [http-nio-8080-exec-1] [[/]][m Initializing Spring DispatcherServlet 'dispatcherServlet' 
 [32m[INFO ][m [35m[2024-03-29T16:11:18,586] [http-nio-8080-exec-1] [DispatcherServlet][m Initializing Servlet 'dispatcherServlet' 
 [32m[INFO ][m [35m[2024-03-29T16:11:18,588] [http-nio-8080-exec-1] [DispatcherServlet][m Completed initialization in 0 ms 
+[32m[INFO ][m [35m[2024-03-29T16:54:03,428] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown initiated... 
+[32m[INFO ][m [35m[2024-03-29T16:54:03,434] [SpringApplicationShutdownHook] [HikariDataSource][m HikariPool-1 - Shutdown completed. 
